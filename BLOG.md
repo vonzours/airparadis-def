@@ -1,3 +1,9 @@
+## Application en ligne
+
+ Tester l'application ici :  
+ https://huggingface.co/spaces/vonzours/airparadis
+
+
 # Air Paradis : construire, comparer et déployer un modèle de sentiment dans une logique MLOps
 
 L’analyse de sentiment sur des tweets est un exercice classique en data science. Mais transformer ce type de modèle en un service réellement exploitable est une autre histoire. Dans le projet Air Paradis, l’objectif n’était pas seulement d’obtenir un bon score sur un jeu de test, mais de construire un système complet : comparer plusieurs approches, suivre les expérimentations, déployer une API sur Hugging Face et mettre en place un mécanisme de monitoring capable de détecter un comportement anormal.
