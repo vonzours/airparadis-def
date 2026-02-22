@@ -7,7 +7,6 @@ on:
 jobs:
   pytest:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
 
@@ -20,12 +19,14 @@ jobs:
         run: |
           python -m pip install --upgrade pip
 
-      - name: Install dependencies (pin TF2.15 to avoid Keras 3)
+      - name: Install TensorFlow/Keras (compatible SavedModel)
+        run: |
+          pip uninstall -y keras keras-core tf-keras tensorflow tensorflow-cpu tensorflow-intel || true
+          pip install "tensorflow==2.15.1" "keras==2.15.0"
+
+      - name: Install API deps
         run: |
           pip install -r api/requirements.txt
-          pip uninstall -y keras || true
-          pip uninstall -y tensorflow tensorflow-cpu tensorflow-intel || true
-          pip install "tensorflow==2.15.1"
           pip install pytest httpx
 
       - name: Run tests
