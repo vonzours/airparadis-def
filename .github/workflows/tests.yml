@@ -19,7 +19,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
 
-      - name: Install TensorFlow/Keras (compatible SavedModel)
+      - name: Install TensorFlow/Keras (SavedModel compatible)
         run: |
           pip uninstall -y keras keras-core tf-keras tensorflow tensorflow-cpu tensorflow-intel || true
           pip install "tensorflow==2.15.1" "keras==2.15.0"
