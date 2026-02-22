@@ -1,0 +1,25 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+
+.ipynb_checkpoints/
+
+.env
+.venv/
+venv/
+
+# Données volumineuses
+data/tweets.csv
+data/processed/*.csv
+.DS_Store
+Thumbs.db
+
+data/raw/
+
+mlruns/
+
+*.log
