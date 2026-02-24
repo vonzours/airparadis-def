@@ -5,7 +5,12 @@ __pycache__/
 *.egg-info/
 dist/
 build/
+# Hugging Face space - large artifacts (do not version)
+hf_space/exported_model/
+hf_space/tokenizer.json
 
+# Screens (optional: keep if needed)
+# sceen/
 .ipynb_checkpoints/
 
 .env
